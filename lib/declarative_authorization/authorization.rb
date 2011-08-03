@@ -537,7 +537,7 @@ module Authorization
             attr_value != evaluated
           when :similar_to
             changed_wildcard = evaluated.gsub('%', '.*')
-            attr_value =~ Regexp.new("\A#{changed_wildcard}\z")
+            attr_value =~ /\A#{changed_wildcard}\z/
           when :contains
             begin
               attr_value.include?(evaluated)
