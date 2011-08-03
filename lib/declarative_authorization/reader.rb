@@ -499,6 +499,10 @@ module Authorization
       def is_not_in (&block)
         [:is_not_in, block]
       end
+
+      def similar_to (&block)
+        [:similar_to, block]
+      end
       
       # Less than
       def lt (&block)

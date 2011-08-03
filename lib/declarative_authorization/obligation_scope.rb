@@ -272,6 +272,7 @@ module Authorization
                                    when :does_not_contain, :is_not then "<> :#{bindvar}"
                                    when :is_in, :intersects_with   then "IN (:#{bindvar})"
                                    when :is_not_in                 then "NOT IN (:#{bindvar})"
+                                   when :similar_to                then "SIMILAR TO :#{bindvar}"
                                    when :lt                        then "< :#{bindvar}"
                                    when :lte                       then "<= :#{bindvar}"
                                    when :gt                        then "> :#{bindvar}"
